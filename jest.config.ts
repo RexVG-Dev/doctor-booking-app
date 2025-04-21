@@ -1,5 +1,6 @@
 export default {
   displayName: 'doctor-booking-app',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   preset: './jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',
