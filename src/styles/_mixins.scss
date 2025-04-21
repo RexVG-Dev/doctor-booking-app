@@ -1,4 +1,3 @@
-@use 'sass:map';
 @use 'variables' as *;
 
 @mixin flex-center {
@@ -13,9 +12,18 @@
   }
 }
 
-@mixin theme-variables($variant) {
-  --primary: #{map.get(map.get($themes, $variant), 'primary')};
-  --background: #{map.get(map.get($themes, $variant), 'background')};
-  --text: #{map.get(map.get($themes, $variant), 'text')};
-  --card-bg: #{map.get(map.get($themes, $variant), 'card-bg')};
+@mixin generate-theme-vars($theme-map, $theme-name: null) {
+  @if $theme-name == null {
+    :root {
+      @each $key, $value in $theme-map {
+        --#{$key}: #{$value};
+      }
+    }
+  } @else {
+    [data-theme='#{$theme-name}'] {
+      @each $key, $value in $theme-map {
+        --#{$key}: #{$value};
+      }
+    }
+  }
 }

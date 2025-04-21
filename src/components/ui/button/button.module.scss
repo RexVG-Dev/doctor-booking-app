@@ -1,0 +1,21 @@
+@use '@styles/globals' as *;
+
+.button {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  background: var(--primary);
+  border: 1px solid var(--border);
+
+  &:hover {
+    @apply shadow-md;
+    background: color-mix(in srgb, var(--primary), black 10%);
+  }
+
+  &--outline {
+    @apply bg-transparent border;
+    border-color: var(--primary);
+  }
+
+  &__text {
+    color: var(--text-primary);
+  }
+}
