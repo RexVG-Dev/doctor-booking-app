@@ -1,10 +1,7 @@
+@use 'sass:map';
+
 @use 'variables' as *;
 @use 'mixins' as *;
 
-:root, [data-theme='light'] {
-  @include theme-variables('light');
-}
-
-[data-theme='dark'] {
-  @include theme-variables('dark');
-}
+@include generate-theme-vars(map.get($themes, 'light'));
+@include generate-theme-vars(map.get($themes, 'dark'), 'dark');

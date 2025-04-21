@@ -10,8 +10,16 @@ module.exports = {
     ),
     ...createGlobPatternsForDependencies(__dirname),
   ],
+  darkMode: ['class', '[data-theme="dark"]'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          light: '#3b82f6',
+          dark: '#60a5fa',
+        }
+      }
+    },
   },
   plugins: [],
 };

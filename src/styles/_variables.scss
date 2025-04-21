@@ -3,15 +3,49 @@
 $themes: (
   light: (
     primary: #3b82f6,
-    background: #ffffff,
-    text: #1f2937,
-    card-bg: #f9fafb
+    secondary: #059669,
+    accent: #9333EA,
+    error: #DC2626,
+    warning: #F59E0B,
+
+    background: #FFFFFF,
+    background-secondary: #F9FAFB,
+    background-tertiary: #F3F4F6,
+    
+    text-primary: #1F2937,
+    text-secondary: #6B7280,
+    text-tertiary: #9CA3AF,
+
+    border: #E5E7EB,
+    border-dark: #D1D5DB,
+
+    card-bg: #F9FAFB,
+    input-bg: #FFFFFF,
+    button-hover: #1D4ED8,
+    disabled: #E5E7EB
   ),
   dark: (
-    primary: #60a5fa,
-    background: #1a1a1a,
-    text: #f3f4f6,
-    card-bg: #2d2d2d
+    primary: #3B82F6,
+    secondary: #10B981,
+    accent: #A855F7,
+    error: #EF4444,
+    warning: #FBBF24,
+
+    background: #111827,
+    background-secondary: #1F2937,
+    background-tertiary: #374151,
+
+    text-primary: #F3F4F6,
+    text-secondary: #9CA3AF,
+    text-tertiary: #6B7280,
+
+    border: #374151,
+    border-dark: #4B5563,
+
+    card-bg: #1F2937,
+    input-bg: #1F2937,
+    button-hover: #60A5FA,
+    disabled: #4B5563
   )
 );
 
