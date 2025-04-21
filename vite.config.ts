@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
+import path from 'path';
 
 export default defineConfig(() => ({
   root: __dirname,
@@ -30,15 +31,15 @@ export default defineConfig(() => ({
   },
   resolve: {
     alias: {
-      '@components': `${__dirname}/src/components`,
-      '@constants': `${__dirname}/src/constants`,
-      '@hooks': `${__dirname}/src/hooks`,
-      '@mock': `${__dirname}/src/mock`,
-      '@store': `${__dirname}/src/store`,
-      '@pages': `${__dirname}/src/pages`,
-      '@styles': `${__dirname}/src/styles`,
-      '@types': `${__dirname}/src/types`,
-      '@utils': `${__dirname}/src/utils`,
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@constants': path.resolve(__dirname, 'src/constants'),
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@mock': path.resolve(__dirname, 'src/mock'),
+      '@store': path.resolve(__dirname, 'src/store'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
+      '@styles': path.resolve(__dirname, 'src/styles'),
+      '@types': path.resolve(__dirname, 'src/types'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
     }
   }
 }));
