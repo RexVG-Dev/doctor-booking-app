@@ -1,4 +1,5 @@
 import { Route, Routes, Link } from 'react-router-dom';
+import { Button, ThemeToggle } from '@components/ui';
 
 import './app.scss';
 
@@ -6,6 +7,14 @@ export function App() {
   return (
     <div className='app'>
 
+    <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+      Contenido adaptado al tema
+    </div>
+
+      <div>
+        <ThemeToggle />
+        <Button />
+      </div>
       <div role="navigation">
         <ul>
           <li>
