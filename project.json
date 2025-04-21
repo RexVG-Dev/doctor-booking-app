@@ -6,5 +6,13 @@
   "projectType": "application",
   "tags": [],
   "// targets": "to see all targets run: nx show project doctor-booking-app --web",
-  "targets": {}
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
 }
