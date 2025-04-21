@@ -28,4 +28,16 @@ export default defineConfig(() => ({
       transformMixedEsModules: true,
     },
   },
+  resolve: {
+    alias: {
+      '@components': `${__dirname}/src/components`,
+      '@constants': `${__dirname}/src/constants`,
+      '@hooks': `${__dirname}/src/hooks`,
+      '@mock': `${__dirname}/src/mock`,
+      '@store': `${__dirname}/src/store`,
+      '@styles': `${__dirname}/src/styles`,
+      '@types': `${__dirname}/src/types`,
+      '@utils': `${__dirname}/src/utils`,
+    }
+  }
 }));

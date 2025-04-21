@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin respond-to($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin theme-variables($variant) {
+  --primary: #{map.get(map.get($themes, $variant), 'primary')};
+  --background: #{map.get(map.get($themes, $variant), 'background')};
+  --text: #{map.get(map.get($themes, $variant), 'text')};
+  --card-bg: #{map.get(map.get($themes, $variant), 'card-bg')};
+}

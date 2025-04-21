@@ -1,0 +1,24 @@
+@use 'sass:map';
+
+$themes: (
+  light: (
+    primary: #3b82f6,
+    background: #ffffff,
+    text: #1f2937,
+    card-bg: #f9fafb
+  ),
+  dark: (
+    primary: #60a5fa,
+    background: #1a1a1a,
+    text: #f3f4f6,
+    card-bg: #2d2d2d
+  )
+);
+
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+@function theme($key, $variant: 'light') {
+  @return map.get(map.get($themes, $variant), $key);
+}

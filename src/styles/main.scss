@@ -1,0 +1,12 @@
+@use 'globals' as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: var(--background);
+  color: var(--text); 
+  font-family: theme('fontFamily.sans');
+  transition: background-color 0.3s, color 0.3s;
+}
