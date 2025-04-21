@@ -35,6 +35,7 @@ export default defineConfig(() => ({
       '@hooks': `${__dirname}/src/hooks`,
       '@mock': `${__dirname}/src/mock`,
       '@store': `${__dirname}/src/store`,
+      '@pages': `${__dirname}/src/pages`,
       '@styles': `${__dirname}/src/styles`,
       '@types': `${__dirname}/src/types`,
       '@utils': `${__dirname}/src/utils`,
