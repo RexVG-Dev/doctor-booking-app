@@ -1,0 +1,50 @@
+.navbar {
+  @apply shadow-md;
+  background: var(--background);
+
+  &__container {
+    @apply max-w-7xl mx-auto px-4 py-3 flex items-center justify-between;
+  }
+
+  &__page-title {
+    @apply text-xl font-bold;
+    color: var(--text-logo);
+  }
+
+  &__desktop {
+    @apply hidden md:flex items-center gap-4;
+  }
+
+  &__mobile-toggle {
+    @apply flex md:hidden items-center gap-3;
+  }
+
+  &__menu-button {
+    @apply text-2xl;
+    color: var(--text-primary);
+  }
+
+  &__links {
+    @apply flex space-x-2;
+  }
+
+  &__link {
+    @apply font-medium transition px-4 py-2 block;
+    color: var(--text-secondary);
+
+    &--active {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+  }
+
+  &__link:hover {
+    color: var(--text-primary);
+  }
+
+  &__mobile-menu {
+    @apply md:hidden px-4 pb-3 space-y-2;
+    background: var(--background);
+    transition: max-height 0.3s ease-in-out;
+  }
+}

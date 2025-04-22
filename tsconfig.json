@@ -19,7 +19,7 @@
       "@hooks/*": ["src/hooks/*"],
       "@mock/*": ["src/mock/*"],
       "@store/*": ["src/store/*"],
-      "@pages": ["src/pages/*"],
+      "@pages": ["src/pages/index.ts"],
       "@types": ["src/types"],
       "@utils": ["src/utils/*"],
     },
