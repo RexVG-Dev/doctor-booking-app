@@ -27,3 +27,21 @@ export type FilterType = {
   specialty: string,
   availability: string,
 }
+
+export const SIZES = {
+  SM: 'sm',
+  MD: 'md',
+  LG: 'lg',
+} as const;
+
+export type SizeType = (typeof SIZES)[keyof typeof SIZES];
+
+export const VARIANTS = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  DANGER: 'danger',
+  GHOST: 'ghost',
+  OUTLINE: 'outline',
+} as const;
+
+export type VariantType = (typeof VARIANTS)[keyof typeof VARIANTS];
