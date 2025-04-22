@@ -1,0 +1,54 @@
+@use '@styles/globals' as *;
+
+.card {
+  @apply shadow-md rounded-lg p-4 flex flex-col gap-4 transition hover:shadow-lg;
+  background: var(--background);
+  color: var(--text-primary);
+
+  &__header {
+    @apply flex items-center gap-4;
+  }
+
+  &__image {
+    @apply w-20 h-20 object-cover rounded-full border;
+    border-color: var(--border);
+  }
+
+  &__name {
+    @apply text-lg font-semibold;
+    color: var(--text-primary);
+  }
+
+  &__specialty {
+    @apply text-sm;
+    color: var(--text-secondary);
+  }
+
+  &__rating {
+    @apply flex items-center gap-1 mt-1 text-sm;
+    color: var(--text-rating);
+  }
+
+  &__details {
+    @apply text-sm space-y-2;
+    color: var(--text-secondary);
+
+    p {
+      @apply flex items-center gap-2;
+      line-height: 1.5;
+      svg {
+        @apply text-base;
+        color: var(--text-tertiary);
+      }
+
+      strong {
+        @apply mr-1;
+        color: var(--text-primary);
+      }
+    }
+  }
+
+  &__button {
+    @apply mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition;
+  }
+}
