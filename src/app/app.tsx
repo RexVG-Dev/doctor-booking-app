@@ -1,19 +1,9 @@
-import { useEffect } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
-
-import useDoctorStore from '@store/doctore.store';
-import mockDoctors from '@mock/mockDoctors';
 import { Button, ThemeToggle } from '@components/ui';
 
 import './app.scss';
 
 export function App() {
-  const setDoctors = useDoctorStore((state) => state.setDoctors);
-
-  useEffect(() => {
-    setDoctors(mockDoctors);
-  }, [setDoctors]);
-
   return (
     <div className='app'>
 
