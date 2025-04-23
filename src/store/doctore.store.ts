@@ -14,6 +14,7 @@ type DoctorStoreType = {
   selectDoctor: (doctor: DoctorType | null) => void;
   selectTimeSlot: (time: string | null) => void;
   confirmAppointment: () => void;
+  cancelAppointment: (index: number) => void;
 }
 
 const useDoctorStore = create<DoctorStoreType>((set, get) => ({
@@ -25,6 +26,7 @@ const useDoctorStore = create<DoctorStoreType>((set, get) => ({
   selectedDoctor: null,
   selectedTime: null,
   appointments: [],
+  
 
   setDoctors: (doctors) => set({ doctors }),
   setFilter: ( key, value ) => set((state) => ({
@@ -52,6 +54,13 @@ const useDoctorStore = create<DoctorStoreType>((set, get) => ({
       selectedDoctor: null,
       selectedTime: null,
     })
+  },
+
+  cancelAppointment: (index: number) => {
+    const { appointments } = get();
+    const updated = [...appointments];
+    updated.splice(index, 1); // elimina el índice seleccionado
+    set({ appointments: updated });
   },
 }));
 
