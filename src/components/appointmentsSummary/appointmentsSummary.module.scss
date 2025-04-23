@@ -1,0 +1,31 @@
+@use '@styles/globals' as *;
+
+.appointments-summary {
+  @apply p-4;
+
+  &__empty {
+    @apply text-gray-500 text-center mt-10;
+  }
+
+  &__list {
+    @apply grid gap-4 sm:grid-cols-2 lg:grid-cols-3;
+  }
+
+  &__card {
+    @apply flex gap-4 p-4 rounded-lg shadow-md;
+    background: var(--card-bg);
+    color: var(--text-primary);
+  }
+
+  &__photo {
+    @apply w-16 h-16 rounded-full object-cover;
+  }
+
+  &__details {
+    @apply flex flex-col justify-center;
+  }
+
+  &__actions {
+    @apply flex items-center justify-end;
+  }
+}

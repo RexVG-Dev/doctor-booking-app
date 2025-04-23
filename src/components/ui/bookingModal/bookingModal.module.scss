@@ -1,0 +1,39 @@
+@use '@styles/globals' as *;
+
+.booking-modal {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+
+  &__content {
+    @apply p-6 rounded-lg shadow-lg relative w-full max-w-md;
+    background: var(--card-bg);
+  }
+
+  &__close {
+    @apply absolute top-2 right-2 text-xl text-gray-500 hover:text-gray-800;
+  }
+
+  &__title {
+    @apply text-xl font-semibold mb-4 text-center;
+    color: var(--text-primary);
+  }
+
+  &__photo {
+    @apply w-24 h-24 rounded-full mx-auto mb-4;
+  }
+
+  &__times {
+    @apply flex flex-wrap gap-2 justify-center mb-4;
+  }
+
+  &__time {
+    @apply px-4 py-2 rounded border border-gray-300 cursor-pointer;
+    background: var(--background-tertiary);
+    color: var(--text-primary);
+
+    &--selected {
+      border-color: var(--primary);
+      background: var(--primary);
+      color: white;
+    }
+  }
+}
